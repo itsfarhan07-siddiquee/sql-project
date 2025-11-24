@@ -26,3 +26,10 @@ Q8:-find least 5 selling state
 <br>
 select state, sum(sales)as sale from myorders group by state order by sale asc limit 5 ;
 <br>
+Q9  find the average sales of each region 
+<br>
+select region, round(avg(sales),0) as salee from myorders group by region ;
+<br>
+Q10 :- grade each sales as good ,average, poor
+<br>
+select*, if(sales>1000,"good",if(sales<1000 and sales>100,"avg","poor")) from myorders;
