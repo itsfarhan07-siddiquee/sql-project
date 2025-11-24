@@ -14,3 +14,15 @@ Q4:-Change customer name into upper case
 <br>
 select *,upper(customer_name) from myorders;
 <br>
+Q6:-find year wise sales 
+<br>
+select year(order_date) ,sum(sales) from myorders group by year(order_date) ;
+<br>
+Q7:-find month wise sales
+<br>
+select month(order_date) ,sum(sales) from myorders group by month(order_date) ;
+<br>
+Q8:-find least 5 selling state
+<br>
+select state, sum(sales)as sale from myorders group by state order by sale asc limit 5 ;
+<br>
